@@ -36,6 +36,18 @@
                     <action id="entityClear" type="entity_clear"/>
                 </actions>
             </entityPicker>
+            <fileStorageUploadField id="attachmentField"
+                                    property="attachment"
+                                    fileNameVisible="true"
+                                    clearButtonVisible="true"
+                                    uploadIcon="FILE_ADD"/>
+            <fileStorageUploadField id="secondAttachmentField"
+                                    property="secondAttachment"
+                                    clearButtonVisible="true"
+                                    fileNameVisible="true"
+                                    uploadIcon="FILE_ADD"
+                                    fileStorageName="fs2"
+            />
         </formLayout>
         <hbox id="detailActions">
             <button id="saveAndCloseBtn" action="saveAction"/>

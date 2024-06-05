@@ -50,6 +50,9 @@ public class User implements JmixUserDetails, HasTimeZone {
     @Column(name = "EMAIL")
     protected String email;
 
+    @Column(name = "AVATAR")
+    private byte[] avatar;
+
     @Column(name = "ACTIVE")
     protected Boolean active = true;
 
@@ -58,6 +61,14 @@ public class User implements JmixUserDetails, HasTimeZone {
 
     @Transient
     protected Collection<? extends GrantedAuthority> authorities;
+
+    public byte[] getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(byte[] avatar) {
+        this.avatar = avatar;
+    }
 
     public UUID getId() {
         return id;

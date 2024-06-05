@@ -17,22 +17,30 @@
         <dataLoadCoordinator auto="true"/>
     </facets>
     <layout>
-        <formLayout id="form" dataContainer="userDc">
-            <textField id="usernameField" property="username" readOnly="true"/>
-            <passwordField id="passwordField"
-                           label="msg://com.company.jmixpmflowbase.entity/User.password"
-                           required="true"
-                           visible="false"/>
-            <passwordField id="confirmPasswordField"
-                           label="msg://confirmPassword"
-                           required="true"
-                           visible="false"/>
-            <textField id="firstNameField" property="firstName"/>
-            <textField id="lastNameField" property="lastName"/>
-            <textField id="emailField" property="email"/>
-            <comboBox id="timeZoneField" property="timeZoneId"/>
-            <checkbox id="activeField" property="active"/>
-        </formLayout>
+        <hbox id="formWrapper" >
+            <formLayout id="form" dataContainer="userDc">
+                <textField id="usernameField" property="username" readOnly="true"/>
+                <passwordField id="passwordField"
+                               label="msg://com.company.jmixpmflowbase.entity/User.password"
+                               required="true"
+                               visible="false"/>
+                <passwordField id="confirmPasswordField"
+                               label="msg://confirmPassword"
+                               required="true"
+                               visible="false"/>
+                <textField id="firstNameField" property="firstName"/>
+                <textField id="lastNameField" property="lastName"/>
+                <textField id="emailField" property="email"/>
+                <comboBox id="timeZoneField" property="timeZoneId"/>
+                <checkbox id="activeField" property="active"/>
+                <fileUploadField id="avatarField" property="avatar" fileNameVisible="true"
+                                 clearButtonVisible="true" uploadIcon="UPLOAD"
+                />
+            </formLayout>
+            <image id="avatarImg" width="16em" height="16em"
+                   dataContainer="userDc"
+                   property="avatar" themeNames="contain"/>
+        </hbox>
         <hbox id="detailActions">
             <button id="saveAndCloseBtn" action="saveAction"/>
             <button id="closeBtn" action="closeAction"/>

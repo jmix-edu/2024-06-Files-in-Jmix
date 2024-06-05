@@ -37,6 +37,10 @@
             <button id="createBtn" action="tasksDataGrid.create"/>
             <button id="editBtn" action="tasksDataGrid.edit"/>
             <button id="removeBtn" action="tasksDataGrid.remove"/>
+            <fileStorageUploadField id="tasksUploadBtn"
+                                    uploadIcon="UPLOAD"
+                                    uploadText="msg://tasksUploadBtn.text"
+                                    fileStoragePutMode="MANUAL"/>
             <simplePagination id="pagination" dataLoader="tasksDl"/>
         </hbox>
         <dataGrid id="tasksDataGrid"
@@ -55,6 +59,7 @@
                 <column property="startDate"/>
                 <column property="estimatedEfforts"/>
                 <column property="project"/>
+                <column key="attachment"/>
             </columns>
         </dataGrid>
         <hbox id="lookupActions" visible="false">
